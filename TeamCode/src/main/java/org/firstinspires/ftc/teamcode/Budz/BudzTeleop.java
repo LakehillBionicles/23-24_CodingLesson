@@ -10,8 +10,6 @@ public class BudzTeleop extends LinearOpMode {
         waitForStart();
 
         while (opModeIsActive()) {
-            double motorPower = -gamepad1.left_stick_y;
-            robot.fpd.setPower(motorPower);
             robot.fpd.setPower(-gamepad1.left_stick_y + gamepad1.left_stick_x + gamepad1.right_stick_x);
             robot.bpd.setPower(-gamepad1.left_stick_y + gamepad1.left_stick_x + gamepad1.right_stick_x);
             robot.fsd.setPower(-gamepad1.left_stick_y + gamepad1.left_stick_x + gamepad1.right_stick_x);
