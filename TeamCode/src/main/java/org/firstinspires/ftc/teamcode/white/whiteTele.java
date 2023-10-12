@@ -1,18 +1,18 @@
-package org.firstinspires.ftc.teamcode.musselman;
+package org.firstinspires.ftc.teamcode.white;
+
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.robot.Robot;
 
 @TeleOp
-public class musselmanTele extends LinearOpMode {
-    musselmanHardwareClass robot = new musselmanHardwareClass();
+public class whiteTele extends LinearOpMode {
+    whiteHWMap robot = new whiteHWMap();
 
-
-    public void runOpMode (){
-        robot.init(hardwareMap); //accessing the config every config is called "hardwareMap"
+    public void runOpMode () {
+        robot.init(hardwareMap);
         waitForStart();
-        //define variables
+
         while (opModeIsActive()) {
-                    //for gamepad y values, forward is negative
             robot.fpd.setPower(-gamepad1.left_stick_y + gamepad1.left_stick_x + gamepad1.right_stick_x);
             robot.bpd.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x + gamepad1.right_stick_x);
             robot.fsd.setPower(-gamepad1.left_stick_y - gamepad1.left_stick_x - gamepad1.right_stick_x);
@@ -20,12 +20,5 @@ public class musselmanTele extends LinearOpMode {
         }
     }
     public void method(){
-        //type your method here
-<<<<<<< HEAD
-=======
-        //checking if this pushes.
-        //round 2?
->>>>>>> origin/master
     }
-
 }

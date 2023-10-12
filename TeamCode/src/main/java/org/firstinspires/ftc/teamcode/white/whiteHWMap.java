@@ -1,22 +1,23 @@
-package org.firstinspires.ftc.teamcode.musselman;
+package org.firstinspires.ftc.teamcode.white;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
-<<<<<<< HEAD
-=======
-//comment
->>>>>>> origin/master
-public class musselmanHardwareClass extends LinearOpMode {
+public class whiteHWMap extends LinearOpMode {
     public DcMotor fpd = null, bpd = null, fsd = null, bsd = null;
     HardwareMap hwMap = null;
-    public musselmanHardwareClass(){}
+
+    public whiteHWMap() {
+    }
+
     @Override
-    public void runOpMode (){}
-    public void init(HardwareMap ahwMap){
-        hwMap=ahwMap;
+    public void runOpMode() {
+    }
+
+    public void init(HardwareMap ahwMap) {
+        hwMap = ahwMap;
 
         fpd = hwMap.get(DcMotor.class, "fpd");
         bpd = hwMap.get(DcMotor.class, "bpd");
@@ -38,6 +39,4 @@ public class musselmanHardwareClass extends LinearOpMode {
         fsd.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         bsd.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
-
-
 }

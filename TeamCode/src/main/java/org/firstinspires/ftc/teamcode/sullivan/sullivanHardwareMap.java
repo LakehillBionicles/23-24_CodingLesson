@@ -1,27 +1,24 @@
-package org.firstinspires.ftc.teamcode.musselman;
+package org.firstinspires.ftc.teamcode.sullivan;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
-<<<<<<< HEAD
-=======
-//comment
->>>>>>> origin/master
-public class musselmanHardwareClass extends LinearOpMode {
+public class sullivanHardwareMap extends LinearOpMode {
     public DcMotor fpd = null, bpd = null, fsd = null, bsd = null;
     HardwareMap hwMap = null;
-    public musselmanHardwareClass(){}
-    @Override
-    public void runOpMode (){}
-    public void init(HardwareMap ahwMap){
-        hwMap=ahwMap;
+    public sullivanHardwareMap(){}
 
-        fpd = hwMap.get(DcMotor.class, "fpd");
-        bpd = hwMap.get(DcMotor.class, "bpd");
-        fsd = hwMap.get(DcMotor.class, "fsd");
-        bsd = hwMap.get(DcMotor.class, "bsd");
+    @Override
+    public void runOpMode() {}
+
+    public void init(HardwareMap ahwMap) {
+        hwMap = ahwMap;
+        fpd =  hwMap.get(DcMotor.class, "fpd");
+        bpd =  hwMap.get(DcMotor.class, "bpd");
+        fsd =  hwMap.get(DcMotor.class, "fsd");
+        bsd =  hwMap.get(DcMotor.class, "bsd");
 
         fpd.setDirection(DcMotorSimple.Direction.REVERSE);
         bpd.setDirection(DcMotorSimple.Direction.FORWARD);
@@ -38,6 +35,4 @@ public class musselmanHardwareClass extends LinearOpMode {
         fsd.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         bsd.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
-
-
 }
